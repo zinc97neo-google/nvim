@@ -31,7 +31,11 @@ local function setup_keybindings()
   k.set("n", "<S-H>", "<cmd>BufferLineCyclePrev<cr>", options)
   -- term
   k.set("n", "<c-\\>", "<cmd>ToggleTerm<cr>", options)
-
+  k.set("n", "[c", 
+    function()
+      require("treesitter-context").go_to_context(vim.v.count1)
+    end
+  , options)
   -- ------  terminal mode ------ --
   k.set("t", "<c-\\>", "<cmd>ToggleTerm<cr>", options)
 

@@ -16,10 +16,12 @@ vim.opt.rtp:prepend(lazypath)
 
 require("plugins/visual")
 require("plugins/editor")
+require("plugins/treesitter")
 
 local plugins = {
   visual,
   editor,
+  treesitter,
 }
 
 require("lazy").setup(plugins, {})
