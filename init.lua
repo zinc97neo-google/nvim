@@ -12,3 +12,4 @@ require("plugins.setup")
 -- plugins --
 require("plugins.colortheme.everforest")
 require("plugins.colortheme.catppuccin")
+require("plugins.lualine")
