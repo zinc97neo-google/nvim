@@ -24,6 +24,8 @@ local function setup_keybindings()
   k.set("n", "<c-a>", "<cmd>wa<cr>", options)
   k.set("n", "<leader>qq", "<cmd>qa<cr>", options)
   k.set("n", "<leader>hh", "<cmd>nohlsearch<cr>", options)
+  -- neo-tree --
+  k.set("n", "<leader>e", "<cmd>Neotree toggle<cr>", options)
 end
 
 setup_keybindings()
