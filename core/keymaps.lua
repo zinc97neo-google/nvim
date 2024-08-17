@@ -29,6 +29,12 @@ local function setup_keybindings()
   -- bufferline --
   k.set("n", "<S-L>", "<cmd>BufferLineCycleNext<cr>", options)
   k.set("n", "<S-H>", "<cmd>BufferLineCyclePrev<cr>", options)
+  -- term
+  k.set("n", "<c-\\>", "<cmd>ToggleTerm<cr>", options)
+
+  -- ------  terminal mode ------ --
+  k.set("t", "<c-\\>", "<cmd>ToggleTerm<cr>", options)
+
 end
 
 setup_keybindings()

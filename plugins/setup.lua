@@ -15,9 +15,11 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("plugins/visual")
+require("plugins/editor")
 
 local plugins = {
   visual,
+  editor,
 }
 
 require("lazy").setup(plugins, {})
