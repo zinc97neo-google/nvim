@@ -1,4 +1,4 @@
-colortheme = {
+local colortheme = {
   "catppuccin/nvim",
   name = "catppuccin",
   lazy = false,
@@ -8,7 +8,7 @@ colortheme = {
   end,
 }
 
-lualine = {
+local lualine = {
   'nvim-lualine/lualine.nvim',
   dependencies = { 'nvim-tree/nvim-web-devicons' },
   lazy = false,
@@ -18,7 +18,7 @@ lualine = {
   end,
 }
 
-neo_tree = {
+local neo_tree = {
   "nvim-neo-tree/neo-tree.nvim",
   branch = "v3.x",
   lazy = false,
@@ -37,8 +37,29 @@ neo_tree = {
   end,
 }
 
+local bufferline = {
+  'akinsho/bufferline.nvim', 
+  version = "*",
+  lazy = false,
+  dependencies = 'nvim-tree/nvim-web-devicons',
+  config = function()
+    require("bufferline").setup({
+      options = {
+        always_show_bufferline = false,
+        offsets = {{
+            filetype = "neo-tree",
+            text = "File Explorer",
+            text_align = "center",
+            separator = true
+        }},
+     }
+    })
+  end
+}
+
 visual = {
   colortheme,
   lualine,
-  neo_tree
+  neo_tree,
+  bufferline
 }

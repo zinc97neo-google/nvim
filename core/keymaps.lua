@@ -4,7 +4,7 @@ local function setup_keybindings()
   local k = vim.keymap
   local options = { noremap = true, silent = true }
   -- ------ insertion mode ------ --
-  k.set("i", "jj", "<ESC>", options)
+  k.set("i", "jj", "<ESC><cmd>wa<cr>", options)
   -- ------   visual mode  ------ --
   k.set("v", "J", ":m '>+1<CR>gv=gv", options)
   k.set("v", "K", ":m '<-2<CR>gv=gv", options)
@@ -26,6 +26,9 @@ local function setup_keybindings()
   k.set("n", "<leader>hh", "<cmd>nohlsearch<cr>", options)
   -- neo-tree --
   k.set("n", "<leader>e", "<cmd>Neotree toggle<cr>", options)
+  -- bufferline --
+  k.set("n", "<S-L>", "<cmd>BufferLineCycleNext<cr>", options)
+  k.set("n", "<S-H>", "<cmd>BufferLineCyclePrev<cr>", options)
 end
 
 setup_keybindings()
