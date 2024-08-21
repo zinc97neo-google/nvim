@@ -60,7 +60,7 @@ local bufferline = {
 }
 
 local colorizer = {
-	"norcalli/nvim-colorizer.lua",
+	"NvChad/nvim-colorizer.lua",
 	version = "*",
 	lazy = false,
 	config = function()
