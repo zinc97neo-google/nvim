@@ -59,9 +59,19 @@ local bufferline = {
 	end,
 }
 
+local colorizer = {
+	"norcalli/nvim-colorizer.lua",
+	version = "*",
+	lazy = false,
+	config = function()
+		require("colorizer").setup()
+	end,
+}
+
 visual = {
 	colortheme,
 	lualine,
 	neo_tree,
 	bufferline,
+	colorizer,
 }
